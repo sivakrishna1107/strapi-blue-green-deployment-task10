@@ -94,9 +94,6 @@ resource "aws_ecs_task_definition" "this" {
     }
   ])
 }
-resource "aws_cloudwatch_log_group" "ecs" {
-  name              = "/ecs/${var.project_name}-siva"
-}
 
 resource "aws_ecs_service" "this" {
   name            = "${var.project_name}-service-siva"
